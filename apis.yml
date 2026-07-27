@@ -1,19 +1,51 @@
 aid: indigov
 name: Indigov
-description: Indigov is a company surfaced as a portfolio company of 8vc and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Indigov is a constituent relationship management (CRM) platform purpose-built
+  for government — U.S. Congressional offices, state legislatures, and municipal
+  agencies — that unifies inbound constituent communications from email, web
+  forms, SMS, social media, phone, and scanned mail into a single
+  cross-organizational inbox. It layers casework tracking, constituent routing,
+  smart tagging, and mass-email triage with rapid response, plus a customer data
+  platform for sentiment and engagement analytics and an award-winning mobile app
+  for field staff. Indigov serves government offices across 35 states and 2
+  territories and was acquired by Granicus, joining its Government Experience
+  Cloud (GXC). It was surfaced as a portfolio company of 8vc and added to the API
+  Evangelist network for enrichment.
 url: https://raw.githubusercontent.com/api-evangelist/indigov/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://dj5q4o1v0zqkl.cloudfront.net/indigov_social_share_34443d1656.jpg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - 8vc
+x-acquired-by: Granicus
 x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Government
+- GovTech
+- Constituent Relationship Management
+- CRM
+- Civic Technology
+- Casework
+- Constituent Communications
+- Customer Data Platform
+- Public Sector
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +55,20 @@ maintainers:
 common:
 - type: Website
   url: https://indigov.com
+- type: Blog
+  url: https://indigov.com/town-hall
+- type: PrivacyPolicy
+  url: https://indigov.com/pages/privacy-policy
+- type: Support
+  url: https://indigov.com/form/customer-support
+- type: Security
+  url: https://indigov.com/pages/responsible-disclosure
+- type: VulnerabilityDisclosure
+  url: security/indigov-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/indigov-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
