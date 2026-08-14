@@ -34,7 +34,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-08-13'
 tags:
 - Company
 - Government
@@ -67,8 +67,40 @@ common:
   url: security/indigov-vulnerability-disclosure.yml
 - type: DomainSecurity
   url: security/indigov-domain-security.yml
+- type: GitHubOrganization
+  url: https://github.com/indigov-us
+- type: Login
+  url: https://app.indigov.com/auth/signin
+- type: Packages
+  url: packages/indigov-packages.yml
+- type: LLMsTxt
+  url: llms/indigov-llms.txt
+- type: Plans
+  url: plans/indigov-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/indigov-rate-limits.yml
+- type: Conformance
+  url: conformance/indigov-conformance.yml
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-13'
+  status: minimal
+  artifacts_added: 6
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Indigov ships a government CRM as an end-user product only — its complete
+    sitemap has no developer, API, docs or pricing route, api./developer./docs.indigov.com
+    do not resolve, and the customer app at app.indigov.com returns a hard 404 for
+    /openapi.json, /graphql, /mcp and every /.well-known/ path.
+  evidence:
+  - url: https://indigov.com/developers
+    status: 404
+  - url: https://app.indigov.com/openapi.json
+    status: 404
+  - url: https://app.indigov.com/.well-known/agent-card.json
+    status: 404
+  - url: https://indigov.com/sitemap.xml
+    status: 200
+  checked: '2026-08-13'
