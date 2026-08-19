@@ -1,0 +1,46 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Indigov
+providerId: indigov
+generated: '2026-08-13'
+method: searched
+source: https://indigov.com/
+created: '2026-08-13'
+modified: '2026-08-13'
+reconciled: false
+plan_count: 0
+tags:
+  - Government
+  - GovTech
+  - Constituent Relationship Management
+  - Public Sector
+  - Plans
+description: >-
+  Indigov publishes no pricing or plans page of any kind. There is no /pricing
+  route (https://indigov.com/pricing returns 404) and no pricing entry in the
+  site's own sitemap.xml, whose complete non-blog URL set is /, /careers,
+  /mission, /products, /solutions, /town-hall, /form/customer-support,
+  /form/demo, /form/press-inquiries, /info/* and /pages/*. The only commercial
+  entry point is a "Request a demo" form at https://indigov.com/form/demo.
+notes: >-
+  Indigov sells to government — Congressional offices, state legislatures and
+  municipal agencies — through direct sales and public procurement vehicles
+  (Indigov holds a NASPO ValuePoint master agreement awarded by the State of
+  Utah), not through a self-serve plan ladder. Following the Granicus
+  acquisition, commercial terms sit inside the Granicus Government Experience
+  Cloud contracting process. There is also no public API to price: no developer
+  portal, no API reference, and no machine-readable contract were found, so
+  there are no API tiers, quotas or overage terms to record. plan_count is 0 as
+  a measured fact, not an omission.
+sources:
+  - url: https://indigov.com/pricing
+    status: 404
+  - url: https://indigov.com/sitemap.xml
+    status: 200
+  - url: https://indigov.com/form/demo
+    status: 200
+plans: []
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

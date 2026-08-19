@@ -1,0 +1,101 @@
+generated: '2026-08-13'
+method: searched
+source: https://indigov.com/pages/accessibility + https://indigov.com/pages/responsible-disclosure
+provider: Indigov
+providerId: indigov
+scope: >-
+  Cross-cutting standards and compliance claims Indigov makes on its own public
+  surface. Indigov publishes no API, so every API-protocol standard below is
+  recorded as not-applicable rather than failed — there is no contract against
+  which to assert OAuth 2.0, OIDC, RFC 9457, pagination or idempotency
+  conformance.
+conformance:
+  - id: wcag-2.2-aa
+    name: Web Content Accessibility Guidelines 2.2, Level AA
+    conforms: true
+    basis: self-declared
+    evidence:
+      url: https://indigov.com/pages/accessibility
+      status: 200
+      quote: >-
+        "all web content, pages, and functionality are made accessible to people
+        with disabilities to the AA standard prescribed by the Web Content
+        Accessibility Guidelines (WCAG) version 2.2"
+    note: >-
+      A self-declared conformance statement, not a third-party audit. No VPAT and
+      no Section 508 conformance report is published alongside it, which is
+      notable for a vendor selling into U.S. federal and state government.
+  - id: safe-harbor-disclosure
+    name: Coordinated vulnerability disclosure with safe harbor
+    conforms: true
+    basis: published-policy
+    evidence:
+      url: https://indigov.com/pages/responsible-disclosure
+      status: 200
+    note: >-
+      Reports to security@indigov.com, acknowledgement within 48 business hours,
+      explicit pledge not to pursue legal action against good-faith researchers.
+      Published as an HTML page only — NOT as an RFC 9116 security.txt (see
+      well-known/indigov-well-known.yml; every /.well-known/ path 404s).
+  - id: rfc9116-security-txt
+    name: RFC 9116 security.txt
+    conforms: false
+    basis: probed
+    evidence:
+      url: https://indigov.com/.well-known/security.txt
+      status: 404
+  - id: soc2
+    name: SOC 2
+    conforms: false
+    basis: not-published
+    note: >-
+      No SOC 2 report, attestation letter or trust center was found on
+      indigov.com or in search. The products page markets "Best-in-class
+      Security" but names no framework.
+  - id: fedramp
+    name: FedRAMP authorization
+    conforms: false
+    basis: not-published
+    note: No FedRAMP marketplace listing or authorization claim found.
+  - id: govramp
+    name: GovRAMP / StateRAMP authorization
+    conforms: false
+    basis: not-published
+    note: >-
+      No GovRAMP (formerly StateRAMP) Authorized Product List entry or
+      authorization claim found — again notable for a SLED-focused vendor.
+      Indigov does hold a NASPO ValuePoint master agreement awarded by the State
+      of Utah, but that is a procurement vehicle, not a security authorization.
+  - id: iso-27001
+    name: ISO/IEC 27001
+    conforms: false
+    basis: not-published
+  - id: oauth2
+    name: OAuth 2.0
+    conforms: false
+    basis: not-applicable
+    note: No public API and no authorization-server metadata document.
+  - id: oidc
+    name: OpenID Connect
+    conforms: false
+    basis: not-applicable
+    note: /.well-known/openid-configuration returns 404 on all three hosts.
+  - id: rfc9457
+    name: RFC 9457 Problem Details for HTTP APIs
+    conforms: false
+    basis: not-applicable
+    note: No published API contract or error reference.
+  - id: idempotency
+    name: Idempotency keys
+    conforms: false
+    basis: not-applicable
+  - id: pagination
+    name: Documented pagination convention
+    conforms: false
+    basis: not-applicable
+notes: >-
+  Indigov's only affirmative, verifiable standards claims are an accessibility
+  conformance statement (WCAG 2.2 AA) and a coordinated-disclosure policy with
+  safe harbor. No security or privacy certification program is published, so NO
+  `Compliance` pointer is wired into apis.yml — asserting one from an
+  accessibility statement alone would overstate the provider's posture.

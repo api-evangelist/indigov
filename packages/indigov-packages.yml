@@ -1,0 +1,121 @@
+generated: '2026-08-13'
+method: searched
+source: https://registry.npmjs.org/ (@indigov scope) + https://github.com/indigov-us
+registries_checked:
+  - registry: npm
+    result: 6 packages published under the first-party @indigov scope
+  - registry: pypi
+    result: no @indigov / indigov package (pypi.org/pypi/indigov/json -> 404)
+  - registry: rubygems
+    result: no indigov gem (rubygems.org/api/v1/gems/indigov.json -> 404)
+  - registry: maven-central
+    result: none found
+  - registry: nuget
+    result: none found
+  - registry: pkg.go.dev
+    result: none found
+  - registry: packagist
+    result: none found
+  - registry: crates.io
+    result: none found
+packages:
+  - name: '@indigov/zendesk-api'
+    language: javascript
+    registry: npm
+    url: https://www.npmjs.com/package/@indigov/zendesk-api
+    repository: https://github.com/indigov-us/zendesk-api
+    version: 0.0.109
+    published: '2025-05-28'
+    license: ISC
+    official: true
+    description: The official Indigov wrapper for the Zendesk API.
+    note: >-
+      Published by Indigov, but it is a typed client for ZENDESK's API — not a
+      client SDK for an Indigov API. Most actively maintained package in the
+      scope (108 versions, first published 2020-01-26).
+  - name: '@indigov/zips-user-updates'
+    language: javascript
+    registry: npm
+    url: https://www.npmjs.com/package/@indigov/zips-user-updates
+    repository: https://github.com/indigov-us/zips-user-updates
+    version: 0.0.27
+    published: '2024-09-27'
+    license: ISC
+    official: true
+    description: 'A helper function to identify user updates re: districts and zip codes.'
+    note: >-
+      Domain utility reflecting Indigov's congressional-district / ZIP matching
+      logic. A library, not an API client.
+  - name: '@indigov/plivo'
+    language: javascript
+    registry: npm
+    url: https://www.npmjs.com/package/@indigov/plivo
+    repository: https://github.com/indigov-us/plivo-node
+    version: 4.49.6
+    published: '2023-07-07'
+    license: MIT
+    official: true
+    description: A Node.js SDK to make voice calls and send SMS using Plivo and to generate Plivo XML.
+    note: >-
+      Indigov-scoped fork of plivo/plivo-node. Third-party API client republished
+      under Indigov's scope; not an Indigov API SDK.
+  - name: '@indigov/sparkpost'
+    language: javascript
+    registry: npm
+    url: https://www.npmjs.com/package/@indigov/sparkpost
+    repository: https://github.com/indigov-us/node-sparkpost
+    version: 2.1.8
+    published: '2022-12-08'
+    license: Apache-2.0
+    official: true
+    description: A Node.js wrapper for interfacing with your favorite SparkPost APIs.
+    note: >-
+      Indigov-scoped fork of the SparkPost Node client, used for the platform's
+      outbound email. Third-party API client, not an Indigov API SDK.
+  - name: '@indigov/flags-api'
+    language: javascript
+    registry: npm
+    url: https://www.npmjs.com/package/@indigov/flags-api
+    repository: null
+    version: 0.0.22
+    published: '2022-05-20'
+    license: ISC
+    official: true
+    description: Strongly typed React/Node client for the Flags service.
+    note: >-
+      Client for an INTERNAL Indigov feature-flag service. The service itself is
+      not publicly documented and has no published contract, so this package is
+      not usable by an external developer.
+  - name: '@indigov/cansend-api'
+    language: javascript
+    registry: npm
+    url: https://www.npmjs.com/package/@indigov/cansend-api
+    repository: null
+    version: 1.0.6
+    published: '2022-04-07'
+    license: UNLICENSED
+    official: true
+    description: Client for the internal "cansend" service (README is a stub).
+    note: >-
+      Published UNLICENSED with a placeholder README ("## To use"). Internal
+      service client, not a public SDK.
+source_code:
+  - url: https://github.com/indigov-us
+    note: >-
+      Indigov's GitHub organization (created 2017-12-06, 17 public repositories).
+      The public repos are overwhelmingly archived forks — terraform-aws-fargate-service,
+      terraform-aws-secure-baseline, ansible-hardening, yomu, node-sparkpost,
+      plivo-node, hackernews-react-graphql. A code search across the org for
+      "openapi", "swagger" and "asyncapi" returned zero hits.
+notes: >-
+  Indigov publishes six first-party npm packages under the @indigov scope, so the
+  Packages pointer is real. NONE of them is a client SDK for an Indigov API:
+  three are forks/wrappers of OTHER vendors' APIs (Zendesk, SparkPost, Plivo),
+  two are clients for internal, undocumented Indigov services (flags, cansend),
+  and one is a district/ZIP helper library. Indigov publishes no public API, so
+  there is nothing for an SDK to wrap. NO `SDKs` pointer is wired in apis.yml —
+  emitting one would credit Indigov with developer-facing client libraries it has
+  not shipped.
+  CURRENCY SIGNAL: only @indigov/zendesk-api has shipped since 2024 (0.0.109,
+  2025-05-28). Four of the six last published in 2022–2023 and the scope has been
+  quiet since the Granicus acquisition.

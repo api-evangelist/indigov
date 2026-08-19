@@ -1,0 +1,47 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Indigov
+providerId: indigov
+generated: '2026-08-13'
+method: searched
+source: https://indigov.com/
+created: '2026-08-13'
+modified: '2026-08-13'
+reconciled: false
+limit_count: 0
+tags:
+  - Government
+  - GovTech
+  - Constituent Relationship Management
+  - Public Sector
+  - Rate Limiting
+description: >-
+  Indigov publishes no rate limits, because Indigov publishes no API. Contract
+  discovery found no developer portal, no API reference, no OpenAPI/Swagger
+  document on any Indigov host, no GraphQL endpoint and no MCP server, so there
+  is no request surface for which a limit, window, burst ceiling or throttling
+  header could be documented.
+notes: >-
+  There is no published X-RateLimit-*, RateLimit-* or Retry-After convention to
+  record, and no documented status code on exhaustion. The only Indigov request
+  surface reachable on the public internet is the authenticated customer
+  application at app.indigov.com, whose behaviour is not documented and was not
+  probed (it requires customer credentials). limit_count is 0 as a measured
+  fact. Any throughput ceilings that exist for a customer integration would be
+  governed by the Indigov/Granicus customer agreement rather than a public
+  policy.
+sources:
+  - url: https://indigov.com/developers
+    status: 404
+  - url: https://indigov.com/api
+    status: 404
+  - url: https://indigov.com/openapi.json
+    status: 404
+  - url: https://app.indigov.com/openapi.json
+    status: 404
+limits: []
+policies: []
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

@@ -1,0 +1,74 @@
+generated: '2026-08-13'
+method: probed
+source: live HTTP probes of indigov.com, www.indigov.com and app.indigov.com
+hosts:
+  - host: https://indigov.com
+    documents:
+      - path: /.well-known/security.txt              # RFC 9116
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server # RFC 8414
+        status: 404
+      - path: /.well-known/api-catalog                # RFC 9727
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json            # A2A 0.3+
+        status: 404
+      - path: /.well-known/agent.json                 # A2A pre-0.3
+        status: 404
+  - host: https://www.indigov.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: https://app.indigov.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource   # RFC 9728
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+notes: >-
+  Every /.well-known/ path returned a hard 404 on all three Indigov hosts — the
+  marketing site (indigov.com), its www alias, and the customer application host
+  (app.indigov.com, which redirects to /auth/signin). No security.txt, no OAuth or
+  OIDC discovery document, no API catalog, no ai-plugin.json and no A2A agent card
+  is served. Indigov DOES publish a responsible-disclosure policy, but as an
+  ordinary web page at https://indigov.com/pages/responsible-disclosure rather than
+  as an RFC 9116 security.txt, so the machine-readable discovery surface is empty.
+  This artifact records a verified ABSENCE: no WellKnown or SecurityTxt pointer is
+  wired into apis.yml, because no probed path returned a document.
+excluded_hosts:
+  - host: https://indigov.io
+    reason: >-
+      Parked domain, not an Indigov surface. NS records point at
+      ns27/ns28.domaincontrol.com (GoDaddy parking) and the root serves a
+      JavaScript redirect to /lander. Every path — including /openapi.json,
+      /swagger.json and /.well-known/agent-card.json — answers HTTP 200 with the
+      parking page's HTML, and /llms.txt returns generic parking boilerplate.
+      Soft-200 on every path; treated as a miss and deliberately not recorded as
+      evidence of any Indigov surface.

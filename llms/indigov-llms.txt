@@ -1,0 +1,79 @@
+# Indigov
+
+> Indigov is a constituent relationship management (CRM) platform purpose-built for
+> government — U.S. Congressional offices, state legislatures, and municipal agencies.
+> It unifies inbound constituent communications from email, web forms, SMS, social
+> media, phone, and scanned mail into a single cross-organizational inbox, and layers
+> casework tracking, constituent routing, smart tagging, and mass-email triage on top.
+> Indigov serves government offices across 35 states and 2 territories and was
+> acquired by Granicus, joining its Government Experience Cloud (GXC).
+
+## Important for agents
+
+Indigov publishes **no public API**. There is no developer portal, no API reference,
+no OpenAPI/AsyncAPI/GraphQL contract, no MCP server, and no A2A agent card. Every
+`/.well-known/` path on indigov.com, www.indigov.com and app.indigov.com returns 404.
+Access to the platform is through the authenticated customer application at
+app.indigov.com; integration work is arranged through the vendor, not self-serve.
+
+Do not attempt to construct an Indigov API call. If a task requires programmatic
+access to Indigov data, route the request to Indigov / Granicus sales or support.
+
+## Products
+
+- Indigov Platform: constituent CRM — rapid email response and mass-email triage,
+  centralized casework tracking and routing, a multi-channel "inbox for everything",
+  smart tagging, and a web + mobile application for field staff.
+- Indigov Outreach: bulk constituent communications — templated and personalized
+  messaging, branded .gov email delivery, audience building and list filtering, and
+  engagement insights.
+
+## Solutions
+
+- Communications and Outreach
+- Constituent Services & Casework
+- Responding to Your Residents (multi-channel triage)
+- Reporting & Analytics
+
+## Site
+
+- Home: https://indigov.com
+- Products: https://indigov.com/products
+- Solutions: https://indigov.com/solutions
+- Mission: https://indigov.com/mission
+- Town Hall (blog): https://indigov.com/town-hall
+- Careers: https://indigov.com/careers
+- Customer sign-in: https://app.indigov.com/auth/signin
+- Request a demo: https://indigov.com/form/demo
+- Customer support: https://indigov.com/form/customer-support
+
+## Policies
+
+- Privacy Policy: https://indigov.com/pages/privacy-policy
+- Cookie Policy: https://indigov.com/pages/cookie-policy
+- SMS Terms & Conditions: https://indigov.com/pages/sms-terms
+- Accessibility (WCAG 2.2 AA): https://indigov.com/pages/accessibility
+- Responsible Disclosure: https://indigov.com/pages/responsible-disclosure
+  (security@indigov.com; safe harbor; acknowledgement within 48 business hours;
+  no bug bounty program)
+
+## Code
+
+- GitHub organization: https://github.com/indigov-us
+- npm scope: https://www.npmjs.com/org/indigov — six first-party packages
+  (@indigov/zendesk-api, @indigov/zips-user-updates, @indigov/plivo,
+  @indigov/sparkpost, @indigov/flags-api, @indigov/cansend-api). None of these is
+  a client SDK for an Indigov API; they wrap third-party APIs or internal services.
+
+## Corporate
+
+- Acquired by Granicus (Government Experience Cloud):
+  https://granicus.com/blog/granicus-acquires-indigov-adding-constituent-relationship-capabilities-to-government-experience-cloud/
+- Investor: 8vc
+- Press: press@indigov.com
+
+---
+generated: 2026-08-13
+method: generated
+source: apis.yml + repo artifacts + probed indigov.com pages (no /llms.txt is served;
+  https://indigov.com/llms.txt returned 404)
