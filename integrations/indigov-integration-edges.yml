@@ -1,16 +1,71 @@
 generated: '2026-10-12'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/indigov/integrations
 - https://n8n.io/integrations/indigov/
 - https://composio.dev/toolkits/indigov
 - https://monid.ai/tools/indigov
 checked:
+- https://api.nuget.org/v3
 - https://composio.dev/toolkits/indigov
+- https://crates.io/api/v1
 - https://monid.ai/tools/indigov
 - https://n8n.io/integrations/indigov/
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
 - https://zapier.com/apps/indigov/integrations
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: npm registry
+  partner: npm
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (JavaScript/TypeScript)
+  evidence: https://www.npmjs.com/package/@indigov/sparkpost
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: npm registry (public registry JSON)
+    spec_file: null
+    language: JavaScript/TypeScript
+    packages:
+    - name: '@indigov/sparkpost'
+      version: 2.1.9
+      released: '2026-09-23'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@indigov/sparkpost
+      repo_leg: github-org:indigov-us
+      publisher_leg: email:indigov.com
+      matched_by: domain
+    - name: '@indigov/zendesk-api'
+      version: 0.0.109
+      released: '2025-05-28'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@indigov/zendesk-api
+      repo_leg: github-org:indigov-us
+      publisher_leg: email:indigov.com
+      matched_by: domain
+    - name: '@indigov/zips-user-updates'
+      version: 0.0.27
+      released: '2025-01-09'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@indigov/zips-user-updates
+      repo_leg: github-org:indigov-us
+      publisher_leg: email:indigov.com
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
 templates: []
